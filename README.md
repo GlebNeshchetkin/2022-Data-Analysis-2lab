@@ -1,13 +1,16 @@
 Lab2_DA_2022(2)
 ==============================
-1.Bажная метрика при оценке модели - MSE (Mean Squared Error) для определения качетсва выполненной задачи регрессии.
-Препроцессинг (\src\data\make_dataset.py)
-3.Разделение данных train/val происходит перед обучением модели (\src\models\train_model.py). Для CatBoost модели подобраны параметры отвечающие за работу с категориями Catboost.
-Генерация признаков (\src\features\build_features.py)
-Обучение модели (\src\models\train_model.py). Для модели lightgbm создан sklearn pipeline (\src\models\scikit_pipelines.py) с использованием CountEncoder() (из CategoricalEncoders).
-Оценка модели (\src\models\evaluate.py). Значения метрик приведены в \models\evaluation_catboost.json для CatBoost и \models\evaluation_ltb.json для lightgbm модели.
-Предсказание (инференс) модели на новых данных (\src\models\predict_model.py). Результаты предсказания - в \data\predicted\prediction.pkl.
-dvc.yaml файл содержит все stages и команды.
+
+1. Bажная метрика при оценке модели - MSE (Mean Squared Error) для определения качетсва выполненной задачи регрессии.
+2. Препроцессинг (\src\data\make_dataset.py)
+3. Генерация признаков (\src\features\build_features.py)
+4. Разделение данных train/val происходит перед обучением модели (\src\models\train_model.py).
+5. В работе используются модели CatBoostRegression, XGBRegressor, LinearRegression (для каждой модели создан свой pipeline: src\models\catboost_model.py, src\models\xgb_regression_model.py, src\models\linear_regression_model.py).
+6. Для модели CatBoost используется метод для работы с категориальными признаками из category_encoders и category_encoders, выбор параметров осуществляется с помощью GridSearchCV.
+7. Оценка модели (\src\models\evaluate.py). Значения метрик приведены в \reports\metrics.json для CatBoost и XGB моделей.
+8. Предсказание (инференс) модели на новых данных (\src\models\predict_model.py). 
+9. Результаты предсказания - в \data\prediction\prediction.csv.
+10. dvc.yaml файл содержит все stages и команды.
 
 A short description of the project.
 
