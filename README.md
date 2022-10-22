@@ -1,5 +1,13 @@
 Lab2_DA_2022(2)
 ==============================
+1.Важная метрика при оценке модели - MSE (Mean Squared Error) для определения качетсва выполненной задачи регрессии.
+2.Препроцессинг (\src\data\make_dataset.py)
+3.Разделение данных train/val происходит перед обучением модели (\src\models\train_model.py). Для CatBoost модели подобраны параметры отвечающие за работу с категориями Catboost.
+Генерация признаков (\src\features\build_features.py)
+Обучение модели (\src\models\train_model.py). Для модели lightgbm создан sklearn pipeline (\src\models\scikit_pipelines.py) с использованием CountEncoder() (из CategoricalEncoders).
+Оценка модели (\src\models\evaluate.py). Значения метрик приведены в \models\evaluation_catboost.json для CatBoost и \models\evaluation_ltb.json для lightgbm модели.
+Предсказание (инференс) модели на новых данных (\src\models\predict_model.py). Результаты предсказания - в \data\predicted\prediction.pkl.
+dvc.yaml файл содержит все stages и команды.
 
 A short description of the project.
 
