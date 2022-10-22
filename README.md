@@ -1,7 +1,7 @@
 Lab2_DA_2022(2)
 ==============================
-1.Важная метрика при оценке модели - MSE (Mean Squared Error) для определения качетсва выполненной задачи регрессии.
-2.Препроцессинг (\src\data\make_dataset.py)
+1.Bажная метрика при оценке модели - MSE (Mean Squared Error) для определения качетсва выполненной задачи регрессии.
+Препроцессинг (\src\data\make_dataset.py)
 3.Разделение данных train/val происходит перед обучением модели (\src\models\train_model.py). Для CatBoost модели подобраны параметры отвечающие за работу с категориями Catboost.
 Генерация признаков (\src\features\build_features.py)
 Обучение модели (\src\models\train_model.py). Для модели lightgbm создан sklearn pipeline (\src\models\scikit_pipelines.py) с использованием CountEncoder() (из CategoricalEncoders).
