@@ -1,0 +1,20 @@
+{
+                  "Model 1 Name": "CatBoostRegression",
+                  "MAE": 15849.295104626088,
+                  "MSE": 795090378.6454457,
+                  "R2": 0.8813874439273095,
+                  "Explained Varience Score": 0.8815518297012481,
+                  "Max Error": 297554.2937249272,
+                  "Model 2 Name": "LinearRegression",
+                  "MAE ": 1.1616360467623412e+16,
+                  "MSE ": 1.475419709401162e+34,
+                  "R2 ": -2.2010491852541612e+24,
+                  "Explained Varience Score ": -2.1933321861626715e+24,
+                  "Max Error ": 1.425134402751712e+18,
+                  "Model 3 Name": "XGBRegression",
+                  "MAE  ": "18281.613308005137",
+                  "MSE  ": "957274210.8817519",
+                  "R2  ": "0.8571926612813594",
+                  "Explained Varience Score  ": "0.8572202242192086",
+                  "Max Error  ": "267930.46875"
+}

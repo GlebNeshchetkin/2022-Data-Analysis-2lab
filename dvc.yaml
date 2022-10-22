@@ -1,0 +1,11 @@
+stages:
+  preprocess_train_data:
+    cmd: python .\src\data\make_dataset.py 'C:\Users\glebn\Lab2_DA_2022_2\data\raw\train.csv', 'C:\Users\glebn\Lab2_DA_2022_2\data\interim\data.pkl', 'C:\Users\glebn\Lab2_DA_2022_2\data\processed\target.pkl'
+  featurizing:
+    cmd: python .src\features\build_features.py 'C:\Users\glebn\Lab2_DA_2022_2\data\interim\data.pkl', 'C:\Users\glebn\Lab2_DA_2022_2\data\processed\data.pkl'
+  train_models:
+    cmd: python .\src\models\train_model.py '.\data\processed\data.pkl', '.\data\processed\target.pkl', '.\models\catboost_model.pkl', '.\models\linear_model.pkl', '.\models\xgb_model.pkl', '.\data\test\data.pkl', '.\data\test\target.pkl'
+  evaluate:
+    cmd: python .\src\models\evaluate.py '.\data\test\data.pkl', '.\data\test\target.pkl', '.\models\linear_model.pkl', '.\models\catboost_model.pkl', '.\models\xgb_model.pkl', '.\reports\metrics.json'                                   
+  prediction:
+    cmd: python .\src\models\predict_model.py '.\data\raw\test.csv', '.\models\catboost_model.pkl', '.\data\prediction\prediction.csv'                                                                                        
