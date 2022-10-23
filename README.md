@@ -1,7 +1,7 @@
 Laboratory work 2
 ==============================
 
-1. Bажная метрика при оценке модели - MSE (Mean Squared Error) для определения качетсва выполненной задачи регрессии.
+1. В данной работе главным показателем качества модели мы считаем значение метрики R2 или коэффицента детерминации. В случае с CatBoostRegressor R2=0.88, для XGBRegressor R2=0.86.
 2. Препроцессинг (\src\data\make_dataset.py)
 3. Генерация признаков (\src\features\build_features.py)
 4. Разделение данных train/val происходит перед обучением модели (\src\models\train_model.py).
@@ -10,7 +10,6 @@ Laboratory work 2
 7. Оценка модели (\src\models\evaluate.py). Значения метрик приведены в \reports\metrics.json для CatBoost и XGB моделей.
 8. Предсказание (инференс) модели на новых данных (\src\models\predict_model.py). 
 9. Результаты предсказания - в \data\prediction\prediction.csv.
-10. dvc.yaml файл содержит все stages и команды.
 
 A short description of the project.
 
